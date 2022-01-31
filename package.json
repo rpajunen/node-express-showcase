@@ -1,11 +1,11 @@
 {
-  "name": "express-template",
+  "name": "node-express-showcase",
   "version": "1.0.0",
   "private": true,
   "keywords": [],
   "author": "Roope Pajunen",
   "license": "ISC",
-  "description": "Template for Node.js Express applications",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/www",
