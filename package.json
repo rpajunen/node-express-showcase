@@ -7,6 +7,9 @@
   "license": "ISC",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "testPathIgnorePatterns": ["<rootDir>/examples/"]
+  },
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
