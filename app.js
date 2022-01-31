@@ -5,6 +5,7 @@ const logger = require('morgan');
 
 const { getOr } = require('lodash/fp');
 const { loginRouter } = require('./routes/loginRoute');
+const { downloadRoute } = require('./routes/downloadRoute');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(loginRouter);
+app.use(downloadRoute);
 
 app.use((req, res, next) => {
   next(createError(404, 'Endpoint does not exist'));
