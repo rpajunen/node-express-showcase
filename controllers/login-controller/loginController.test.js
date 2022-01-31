@@ -27,6 +27,19 @@ describe('loginController', () => {
     expect(serviceMock).toHaveBeenCalled();
   });
 
+  it('given request body, when called, calls the service with correct parameters', () => {
+    reqStub = {
+      body: {
+        username: 'some-user',
+        password: 'some-password',
+      },
+    };
+
+    loginController(reqStub, resMock, nextStub);
+
+    expect(serviceMock).toHaveBeenCalledWith('some-user', 'some-password');
+  });
+
   it('calls status with 200', () => {
     expect(resMock.status).toHaveBeenCalledWith(200);
   });
